@@ -1,0 +1,82 @@
+body {
+  margin: 50px;
+}
+
+main {
+  background-color: beige;
+  border-color: black;
+  border: solid 3px;
+  padding: 5px;
+}
+
+header {
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+header h6 {
+  color: red;
+  margin: 0;
+}
+
+.summary {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.contests {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.contests p {
+  font-size: 15px;
+}
+
+.education {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.education p {
+  font-size: 15px;
+}
+
+.skills {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.skills p {
+  font-size: 15px;
+}
+.skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.projects {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.projects p {
+  font-size: 15px;
+}
+.projects li {
+  list-style: none;
+}
+.projects li li {
+  list-style: disc;
+}
+
+/*# sourceMappingURL=styles.css.map */

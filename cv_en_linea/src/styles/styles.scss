@@ -1,0 +1,77 @@
+@import "colors";
+
+body {
+    margin: 50px;
+}
+
+main {
+    background-color: beige;
+    border-color: $border-color;
+    border: solid 3px;
+    padding: 5px;
+}
+
+header {
+    text-align: center;
+    h1 {
+        margin: 0;
+    }
+    h6 {
+        color: $text-color;
+        margin: 0;
+    }
+}
+
+@mixin section-template {
+    margin: 0px;
+    padding: 10px;
+    border: solid 1px $border-color;
+    border-radius: 5px;
+}
+
+.summary {
+    @include section-template;
+}
+
+.contests {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+}
+
+.education {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+}
+
+.skills {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+}
+
+.projects {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        list-style: none;
+
+        li {
+            list-style: disc;
+        }
+    }
+}
+
