@@ -1,0 +1,95 @@
+body {
+  margin: 50px;
+}
+
+main {
+  background-color: beige;
+  border-color: black;
+  border: solid 3px;
+  padding: 5px;
+}
+
+h6, h1 {
+  text-align: center;
+  margin: 0;
+}
+
+h6 {
+  color: red;
+}
+
+.summary {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.contests {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.contests p {
+  font-size: 15px;
+}
+
+.education {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.education p {
+  font-size: 15px;
+}
+
+.skills {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.skills p {
+  font-size: 15px;
+}
+.skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .skills > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.projects {
+  margin: 0px;
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.projects p {
+  font-size: 15px;
+}
+.projects li {
+  list-style: none;
+}
+.projects li ul li:has(a) {
+  list-style-type: none;
+}
+.projects li ul li:not(:has(a)) {
+  list-style-type: disc;
+}
+
+/*# sourceMappingURL=styles.css.map */

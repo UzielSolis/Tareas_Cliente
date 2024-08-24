@@ -1,0 +1,102 @@
+@import "colors";
+
+body {
+    margin: 50px;
+}
+
+main {
+    background-color: beige;
+    border-color: $border-color;
+    border: solid 3px;
+    padding: 5px;
+}
+
+%header {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    @extend %header;
+}
+
+h6 {
+    @extend %header;
+    color: $text-color;
+}
+
+@mixin section-template {
+    margin: 0px;
+    padding: 10px;
+    border: solid 1px $border-color;
+    border-radius: 5px;
+}
+
+.summary {
+    @include section-template;
+}
+
+.contests {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+}
+
+.education {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+}
+
+.skills {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .skills > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skills {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.projects {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        list-style: none;
+
+        ul li {
+
+            &:has(a) {
+                list-style-type: none;
+            }
+
+            &:not(:has(a)) {
+                list-style-type: disc;
+            }
+        }
+    }
+}
