@@ -9,15 +9,13 @@ main {
   padding: 5px;
 }
 
-header {
+h6, h1 {
   text-align: center;
-}
-header h1 {
   margin: 0;
 }
-header h6 {
+
+h6 {
   color: red;
-  margin: 0;
 }
 
 .summary {
@@ -63,6 +61,18 @@ header h6 {
   gap: 5px;
 }
 
+@media screen and (max-width: 800px) {
+  .skills > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .skills ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .projects {
   margin: 0px;
   padding: 10px;
@@ -75,8 +85,11 @@ header h6 {
 .projects li {
   list-style: none;
 }
-.projects li li {
-  list-style: disc;
+.projects li ul li:has(a) {
+  list-style-type: none;
+}
+.projects li ul li:not(:has(a)) {
+  list-style-type: disc;
 }
 
 /*# sourceMappingURL=styles.css.map */

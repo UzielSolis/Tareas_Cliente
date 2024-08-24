@@ -11,15 +11,18 @@ main {
     padding: 5px;
 }
 
-header {
+%header {
     text-align: center;
-    h1 {
-        margin: 0;
-    }
-    h6 {
-        color: $text-color;
-        margin: 0;
-    }
+    margin: 0;
+}
+
+h1 {
+    @extend %header;
+}
+
+h6 {
+    @extend %header;
+    color: $text-color;
 }
 
 @mixin section-template {
@@ -60,6 +63,22 @@ header {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .skills > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skills {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
 .projects {
     @include section-template;
     p {
@@ -69,9 +88,15 @@ header {
     li {
         list-style: none;
 
-        li {
-            list-style: disc;
+        ul li {
+
+            &:has(a) {
+                list-style-type: none;
+            }
+
+            &:not(:has(a)) {
+                list-style-type: disc;
+            }
         }
     }
 }
-
