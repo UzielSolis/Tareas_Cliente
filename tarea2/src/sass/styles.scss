@@ -1,0 +1,198 @@
+@import "colors";
+
+img {
+    display: block;
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+body {
+    margin: 50px;
+}
+
+main {
+    background-color: beige;
+    border-color: $border-color;
+    border: solid 3px;
+    padding: 5px;
+}
+
+%header {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    @extend %header;
+}
+
+h6 {
+    @extend %header;
+    color: $text-color;
+}
+
+@mixin section-template {
+    margin: 0px;
+    padding: 10px;
+    border: solid 1px $border-color;
+    border-radius: 5px;
+}
+
+.summary {
+    @include section-template;
+}
+
+.contests {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+}
+
+.education {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+}
+
+.skills {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .skills > ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skills {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.projects {
+    @include section-template;
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        list-style: none;
+
+        ul li {
+
+            &:has(a) {
+                list-style-type: none;
+            }
+
+            &:not(:has(a)) {
+                list-style-type: disc;
+            }
+        }
+    }
+}
+
+#openModalButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: $border-radius;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+  // Estilos para el modal
+.modal {
+    display: none; // Inicialmente escondido
+    position: fixed;
+    z-index: 1; // Asegura que el modal esté encima de otros elementos
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $modal-background-color;
+}
+
+  // Contenido del modal
+.modal-content {
+    background-color: $modal-content-background;
+    margin: 10% auto; // Centrado vertical y horizontalmente
+    padding: 20px;
+    border: 1px solid #888;
+    width: $modal-width;
+    max-width: $modal-max-width;
+    border-radius: $border-radius;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: $border-radius;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #555;
+    }
+}
+
+// Botón de cerrar el modal
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,
+        &:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+}

@@ -1,0 +1,76 @@
+{
+    "header": {
+        "image": "images/image.png",
+        "name": "Uziel Solis",
+        "title": "Software Development Student",
+        "email": "uziel.solis@iteso.mx"
+    },
+    "summary": {
+        "title": "Summary",
+        "content": "Dynamic and creative software developer. Eager to learn new technologies on a team. Now I am studying software developer engineering at ITESO. Looking to land my first job as tester or backend engineer to pursue my long term goal of becoming a full stack developer. My post graduation goal is to become a DevOps developer and I would like to undertake an internship position that advances that goal."
+    },
+    "contests": [
+    {
+        "title": "Programming contests",
+        "items": [
+            "Contestant, 2022 International Collegiate Programming Contest"
+        ]
+    }
+    ],
+    "education": [
+    {
+        "title": "Education",
+        "items": [
+            "ITESO, Software Development Engineering, 2020-present"
+        ]
+    }
+    ],
+    "skills": [
+    {
+        "category": "Database",
+        "items": ["MongoDB"]
+    },
+    {
+        "category": "Programming Languages",
+        "items": ["Python", "JAVA", "C", "HTML", "JavaScript", "CSS", "MySQL"]
+    },
+    {
+        "category": "Languages",
+        "items": ["Spanish", "English"]
+    }
+    ],
+    "projects": [
+        {
+        "name": "Indievelopers",
+        "title": "WORDLE",
+        "description": "A guessing game using Python, where the user has to guess the N dimension word.",
+        "details": [
+            "Gained experience in program testing using Pytex, problem solving, backend programming, and Python requests.",
+            "Solving logic problems."
+        ]
+        },
+        {
+        "name": "ITESO",
+        "title": "CLASSiFiCATiON API",
+        "description": "A program that receives a list of points in a k dimensional space, and a new point to be added to the list.",
+        "details": [
+            "Gained experience in API, classes, objects and collections.",
+            "Had a teamwork experience, having a different task each one.",
+            "Participated in the making of exceptions, and a function to use the Euclidean distance for the classification of the objects.",
+            "GitHub Link: https://github.com/Uziel-Solis04/Classification-API.git"
+        ]
+        },
+        {
+        "name": "ITESO",
+        "title": "TiC‑TAC‑TOE",
+        "description": "A Tic‑tac‑toe game using a 8051 micro chip and assembly language.",
+        "details": [
+            "Gained experience in using assembly language, learned about the hardware inside a 8051 micro chip.",
+            "Making connections in a protoboard.",
+            "Using Timers and interrupts.",
+            "GitHub Link: https://github.com/Uziel-Solis04/Tic-tac-toe.git"
+        ]
+        }
+    ],
+    "contactEmail": "solisuziel55@hotmail.com"
+}

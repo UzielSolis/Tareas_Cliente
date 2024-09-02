@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV en Linea</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="" alt="Profile Image">
+            <h1></h1>
+            <h6></h6>
+            <h6></h6>
+        </header>
+        <section class="summary">
+            <h2></h2>
+            <p></p>
+        </section>
+        <section class="contests">
+            <h2></h2>
+            <ul></ul>
+        </section>
+        <section class="education">
+            <h2></h2>
+            <ul></ul>
+        </section>
+        <section class="skills">
+            <h2></h2>
+            <ul></ul>
+        </section>
+        <section class="projects">
+            <h2></h2>
+            <ul></ul>
+        </section>
+        <section class="formulario">
+            <button id="openModalButton">Contacto</button>
+            <div id="contactModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2>Formulario de Contacto</h2>
+                    <form id="contactForm" method="POST">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
