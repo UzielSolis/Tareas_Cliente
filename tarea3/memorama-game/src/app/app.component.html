@@ -1,0 +1,27 @@
+<main>
+  <h1>Memorama</h1>
+  <div class="game-board">
+    @for(card of cards; track $index) {
+      <div class="card" (click)="flipCard(card)" [class.matched]="card.matched" [class.revealed]="card.revealed">
+        @if(card.revealed || card.matched) {
+          <span>{{ card.image }}</span>
+        }
+        @else {
+          <span>?</span>
+        }
+      </div>
+    }
+  </div>
+
+  @if(gameOver) {
+    <div class="game-over">
+      <h1>¡Felicidades!</h1>
+      <p>Has completado el juego en {{ attempts }} intentos.</p>
+      <button (click)="restartGame()">Jugar de nuevo</button>
+    </div>
+  } @else {
+    <div class="attempts">
+      Intentos: {{ attempts }}
+    </div>
+  }
+</main>
