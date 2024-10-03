@@ -1,0 +1,5 @@
+<h1>Users</h1>
+<main>
+    <app-users-list [users]="users" (selectUser)="selectUser($event)"></app-users-list>
+    <app-users-details [users]="selectedUser" (clearSelectedUser)="clearSelectedUser()"></app-users-details>
+</main>

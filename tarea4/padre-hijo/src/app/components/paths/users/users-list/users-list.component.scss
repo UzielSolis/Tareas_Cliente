@@ -1,0 +1,25 @@
+$highlight-color: lightblue;
+
+ul {
+    list-style-type: none;
+
+    li {
+        padding: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        box-sizing: border-box;
+
+        &:hover {
+        background-color: #f0f0f0;
+        }
+
+        &.selected {
+        background-color: $highlight-color;
+        }
+
+        &:nth-child(2n) {
+            background-color: rgb(133, 211, 235);
+        }
+    }
+}

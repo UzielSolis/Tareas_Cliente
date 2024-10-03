@@ -1,0 +1,31 @@
+header {
+    padding: 0 20px;
+    height: 80px;
+    background-color: rgb(146, 110, 146);
+
+    span {
+        color: purple;
+        font-size: 20px;
+        line-height: 80px;
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        display: inline-block;
+        margin-left: 20px;
+
+        li {
+            display: inline-block;
+            margin-left: 8px;
+
+            a {
+                display: inline-block;
+                padding: 0 10px;
+                line-height: 80px;
+            }
+        }
+
+    }
+}

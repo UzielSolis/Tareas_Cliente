@@ -1,0 +1,18 @@
+<main>
+    @if (users) {
+        <div>
+            <p><strong>Nombre:</strong> {{ users.name }}</p>
+            <p><strong>Username:</strong> {{ users.username }}</p>
+            <p><strong>Email:</strong> {{ users.email }}</p>
+            <p><strong>Phone</strong> {{ users.phone}} </p>
+            <p><strong>Website:</strong> {{ users.website }}</p>
+            <h3>Company</h3>
+            <p><strong>Name:</strong> {{ users.company.name }}</p>
+            <p><strong>Catch Phrase:</strong> {{ users.company.catchPhrase }}</p>
+            <p><strong>BS:</strong> {{ users.company.bs }}</p>
+            <button (click)="onClear()">Limpiar Selección</button>
+        </div>
+    } @else {
+        <p>No hay usuario seleccionado.</p>
+    }
+</main>
